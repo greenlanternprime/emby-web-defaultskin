@@ -84,7 +84,7 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
                 rows: 1,
                 preferThumb: false,
                 showGroupCount: true,
-                scalable: true
+                scalable: false
             });
         });
     }
