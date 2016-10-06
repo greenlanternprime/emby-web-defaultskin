@@ -16,9 +16,9 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
 
         var self = this;
 
-        self.name = 'Default Skin';
+        self.name = 'Wildcard Skin';
         self.type = 'skin';
-        self.id = 'defaultskin';
+        self.id = 'wildcardskin';
 
         var dependencyPrefix = self.id;
         var settingsObjectName = dependencyPrefix + '/skinsettings';
@@ -219,7 +219,7 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
                     type: 'settings',
                     category: 'Display',
                     thumbImage: '',
-                    title: 'Default Skin'
+                    title: 'Wildcard Skin'
                 });
             }
 
