@@ -66,7 +66,7 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
         var options = {
 
             IncludeItemTypes: "Episode",
-            Limit: 12,
+            Limit: 60,
             Fields: "PrimaryImageAspectRatio",
             ParentId: parentId,
             ImageTypeLimit: 1,
@@ -80,11 +80,11 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
             cardBuilder.buildCards(result, {
                 parentContainer: section,
                 itemsContainer: section.querySelector('.itemsContainer'),
-                shape: 'backdrop',
-                rows: 3,
-                preferThumb: true,
+                shape: 'portrait',
+                rows: 1,
+                preferThumb: false,
                 showGroupCount: true,
-                scalable: false
+                scalable: true
             });
         });
     }
