@@ -93,7 +93,7 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
 
         var options = {
 
-            SortBy: "Random",
+            SortBy: "IsFavoriteOrLiked",
             IncludeItemTypes: "Series",
             Limit: 20,
             Recursive: true,
