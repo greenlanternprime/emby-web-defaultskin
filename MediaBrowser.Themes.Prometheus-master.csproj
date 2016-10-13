@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35E9294C-669A-43BE-A35E-92F3F6045FDE}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>Prometheus</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Prometheus</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MediaBrowser, Version=3.0.249.0, Culture=neutral, PublicKeyToken=59fc04479785fd64, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dependences\MCE_MediaBrowser3_0_249\MediaBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="MediaBrowser.Model">
+      <HintPath>..\dependences\MediaBrowser.Model.net35\MediaBrowser.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.MediaCenter">
+      <Name>Microsoft.MediaCenter</Name>
+      <HintPath>..\dependences\MediaCenter\Microsoft.MediaCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.MediaCenter.UI">
+      <Name>Microsoft.MediaCenter.UI</Name>
+      <HintPath>..\dependences\MediaCenter\Microsoft.MediaCenter.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <Name>System.Core</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="components\focushandler.js" />
+    <Content Include="components\horizontallist.js" />
+    <Content Include="components\tabbedpage.js" />
+    <Content Include="css\colors.dark.css" />
+    <Content Include="css\fonts.android.css" />
+    <Content Include="css\fonts.css" />
+    <Content Include="css\fonts.device.css" />
+    <Content Include="css\fonts.segoe.css" />
+    <Content Include="css\fonts.sized.css" />
+    <Content Include="css\fonts.xbox.css" />
+    <Content Include="css\images\equalizer_black.gif" />
+    <Content Include="css\images\equalizer_white.gif" />
+    <Content Include="css\images\fresh.png" />
+    <Content Include="css\images\logo.png" />
+    <Content Include="css\images\logowhite.png" />
+    <Content Include="css\images\rotten.png" />
+    <Content Include="css\mediaicons\1080P.png" />
+    <Content Include="css\mediaicons\1080P_white.png" />
+    <Content Include="css\mediaicons\480P.png" />
+    <Content Include="css\mediaicons\480P_white.png" />
+    <Content Include="css\mediaicons\720P.png" />
+    <Content Include="css\mediaicons\720P_white.png" />
+    <Content Include="css\mediaicons\Channels_2 0.png" />
+    <Content Include="css\mediaicons\Channels_2 0_white.png" />
+    <Content Include="css\mediaicons\Channels_5 1.png" />
+    <Content Include="css\mediaicons\Channels_5 1_white.png" />
+    <Content Include="css\mediaicons\Channels_7 1.png" />
+    <Content Include="css\mediaicons\Channels_7 1_white.png" />
+    <Content Include="css\mediaicons\S_Audio_AAC.png" />
+    <Content Include="css\mediaicons\S_Audio_AAC_white.png" />
+    <Content Include="css\mediaicons\S_Audio_ac3.png" />
+    <Content Include="css\mediaicons\S_Audio_ac3_white.png" />
+    <Content Include="css\mediaicons\S_Audio_DDEX.png" />
+    <Content Include="css\mediaicons\S_Audio_DDEX_white.png" />
+    <Content Include="css\mediaicons\S_Audio_DDHD.png" />
+    <Content Include="css\mediaicons\S_Audio_DDHD_white.png" />
+    <Content Include="css\mediaicons\S_Audio_dts.png" />
+    <Content Include="css\mediaicons\S_Audio_dtsES.png" />
+    <Content Include="css\mediaicons\S_Audio_dtsES_white.png" />
+    <Content Include="css\mediaicons\S_Audio_dtsHD.png" />
+    <Content Include="css\mediaicons\S_Audio_dtsHD_white.png" />
+    <Content Include="css\mediaicons\S_Audio_dts_white.png" />
+    <Content Include="css\mediaicons\S_Audio_MP3.png" />
+    <Content Include="css\mediaicons\S_Audio_MP3_white.png" />
+    <Content Include="css\mediaicons\S_Audio_MPEG.png" />
+    <Content Include="css\mediaicons\S_Audio_MPEG_white.png" />
+    <Content Include="css\mediaicons\S_Media_3GP.png" />
+    <Content Include="css\mediaicons\S_Media_3GP_white.png" />
+    <Content Include="css\mediaicons\S_Media_AVCHD.png" />
+    <Content Include="css\mediaicons\S_Media_AVCHD_white.png" />
+    <Content Include="css\mediaicons\S_Media_BlueRay.png" />
+    <Content Include="css\mediaicons\S_Media_BlueRay_white.png" />
+    <Content Include="css\mediaicons\S_Media_DVD.png" />
+    <Content Include="css\mediaicons\S_Media_DVD_white.png" />
+    <Content Include="css\mediaicons\S_Media_FLV.png" />
+    <Content Include="css\mediaicons\S_Media_FLV_white.png" />
+    <Content Include="css\mediaicons\S_Media_HDDVD.png" />
+    <Content Include="css\mediaicons\S_Media_HDDVD_white.png" />
+    <Content Include="css\mediaicons\S_Media_MKV.png" />
+    <Content Include="css\mediaicons\S_Media_MKV_white.png" />
+    <Content Include="css\mediaicons\S_Media_MOV.png" />
+    <Content Include="css\mediaicons\S_Media_MOV_white.png" />
+    <Content Include="css\mediaicons\S_Media_MP4.png" />
+    <Content Include="css\mediaicons\S_Media_MP4_white.png" />
+    <Content Include="css\mediaicons\S_Video_Divx.png" />
+    <Content Include="css\mediaicons\S_Video_Divx_white.png" />
+    <Content Include="css\mediaicons\S_Video_H264.png" />
+    <Content Include="css\mediaicons\S_Video_H264_white.png" />
+    <Content Include="css\mediaicons\S_Video_MPEG.png" />
+    <Content Include="css\mediaicons\S_Video_MPEG_white.png" />
+    <Content Include="css\mediaicons\S_Video_Xvid.png" />
+    <Content Include="css\mediaicons\S_Video_Xvid_white.png" />
+    <Content Include="css\noflex.css" />
+    <Content Include="css\style.css" />
+    <Content Include="header.html" />
+    <Content Include="home.html" />
+    <Content Include="home\home.css" />
+    <Content Include="home\home.js" />
+    <Content Include="home\spotlight.js" />
+    <Content Include="home\views.channels.html" />
+    <Content Include="home\views.channels.js" />
+    <Content Include="home\views.collections.html" />
+    <Content Include="home\views.collections.js" />
+    <Content Include="home\views.generic.html" />
+    <Content Include="home\views.generic.js" />
+    <Content Include="home\views.livetv.html" />
+    <Content Include="home\views.livetv.js" />
+    <Content Include="home\views.movies.html" />
+    <Content Include="home\views.movies.js" />
+    <Content Include="home\views.music.html" />
+    <Content Include="home\views.music.js" />
+    <Content Include="home\views.playlists.html" />
+    <Content Include="home\views.playlists.js" />
+    <Content Include="home\views.tv.html" />
+    <Content Include="home\views.tv.js" />
+    <Content Include="item\item.css" />
+    <Content Include="item\item.html" />
+    <Content Include="item\item.js" />
+    <Content Include="list\list.html" />
+    <Content Include="list\list.js" />
+    <Content Include="livetv\guide.css" />
+    <Content Include="livetv\guide.html" />
+    <Content Include="livetv\guide.js" />
+    <Content Include="livetv\livetv.html" />
+    <Content Include="livetv\livetv.js" />
+    <Content Include="movies\movies.html" />
+    <Content Include="movies\movies.js" />
+    <Content Include="music\music.html" />
+    <Content Include="music\music.js" />
+    <Content Include="music\views.favorites.html" />
+    <Content Include="nowplaying\nowplaying.css" />
+    <Content Include="nowplaying\nowplaying.html" />
+    <Content Include="nowplaying\nowplaying.js" />
+    <Content Include="nowplaying\playlist.html" />
+    <Content Include="nowplaying\playlist.js" />
+    <Content Include="nowplaying\videoosd.css" />
+    <Content Include="nowplaying\videoosd.html" />
+    <Content Include="nowplaying\videoosd.js" />
+    <Content Include="plugin.js" />
+    <Content Include="search\search.css" />
+    <Content Include="search\search.html" />
+    <Content Include="search\search.js" />
+    <Content Include="settings\settings.html" />
+    <Content Include="settings\settings.js" />
+    <Content Include="skininfo.js" />
+    <Content Include="skinsettings.js" />
+    <Content Include="tv\tv.html" />
+    <Content Include="tv\tv.js" />
+    <Content Include="tv\views.favorites.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="package.json" />
+    <None Include="README.md" />
+    <None Include="strings\de.json" />
+    <None Include="strings\en-GB.json" />
+    <None Include="strings\en-US.json" />
+    <None Include="strings\en.json" />
+    <None Include="strings\es-419.json" />
+    <None Include="strings\fr.json" />
+    <None Include="strings\hr.json" />
+    <None Include="strings\it.json" />
+    <None Include="strings\nl.json" />
+    <None Include="strings\pl.json" />
+    <None Include="strings\pt-BR.json" />
+    <None Include="strings\pt-PT.json" />
+    <None Include="strings\ru.json" />
+    <None Include="strings\sv.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent>copy "$(TargetPath)" %25programdata%25\MediaBrowser-Classic\Plugins\$(TargetFileName)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

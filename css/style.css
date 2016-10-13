@@ -141,6 +141,7 @@ a {
 
 .userViewNames {
     padding-left: 3.75%;
+    padding-top: 33.33%;
 }
 
 .itemScrollFrame.scrollFrameX {
@@ -219,6 +220,11 @@ a {
     margin-top: 0;
     padding-top: 0;
     padding-bottom: .2em;
+    font-size: x-large !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+    font-family: Verdana !important;
+    color: #fff;
 }
 
 .listNumbers {
