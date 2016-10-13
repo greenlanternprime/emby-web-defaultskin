@@ -3,8 +3,9 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
     function loadResume(element, parentId) {
 
         var options = {
-
             Limit: 60,
+            IncludeItemTypes: "Episode",
+            Fields: "PrimaryImageAspectRatio",
             ParentId: parentId,
             ImageTypeLimit: 1,
             EnableImageTypes: "Primary,Backdrop,Thumb"
@@ -20,6 +21,7 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
                 shape: 'portrait',
                 rows: 1,
                 preferThumb: true,
+                showGroupCount: true,
                 scalable: false
             });
         });
@@ -42,8 +44,12 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
 
         var options = {
 
+            IncludeItemTypes: "Episode",
             Limit: 60,
-            ParentId: parentId
+            Fields: "PrimaryImageAspectRatio",
+            ParentId: parentId,
+            ImageTypeLimit: 1,
+            EnableImageTypes: "Primary,Backdrop,Thumb"
         };
 
         return Emby.Models.nextUp(options).then(function (result) {
@@ -56,6 +62,7 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
                 shape: 'portrait',
                 rows: 1,
                 preferThumb: true,
+                showGroupCount: true,
                 scalable: false
             });
         });
