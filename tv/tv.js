@@ -194,8 +194,7 @@ define(['connectionManager', 'loading', './../skininfo', 'alphaPicker', './../co
                 },
                 cardOptions: {
                     rows: 2,
-                    scalable: false,
-                    showTitle: true
+                    scalable: false
                 }
             });
 
@@ -243,7 +242,6 @@ define(['connectionManager', 'loading', './../skininfo', 'alphaPicker', './../co
                         indexLimit: 4,
                         parentId: pageParams.parentid,
                         rows: 2,
-                        showTitle: true,
                         scalable: false
                     }
                 });
@@ -293,7 +291,6 @@ define(['connectionManager', 'loading', './../skininfo', 'alphaPicker', './../co
                     itemsContainer: section.querySelector('.itemsContainer'),
                     shape: 'auto',
                     rows: 2,
-                    showTitle: true,
                     scalable: false
                 });
 
