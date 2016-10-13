@@ -4,7 +4,7 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
 
         var options = {
 
-            Limit: 6,
+            Limit: 60,
             ParentId: parentId,
             ImageTypeLimit: 1,
             EnableImageTypes: "Primary,Backdrop,Thumb"
@@ -17,8 +17,8 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
             cardBuilder.buildCards(result.Items, {
                 parentContainer: section,
                 itemsContainer: section.querySelector('.itemsContainer'),
-                shape: 'backdrop',
-                rows: 3,
+                shape: 'portrait',
+                rows: 1,
                 preferThumb: true,
                 scalable: false
             });
@@ -42,7 +42,7 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
 
         var options = {
 
-            Limit: 18,
+            Limit: 60,
             ParentId: parentId
         };
 
@@ -53,8 +53,8 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
             cardBuilder.buildCards(result.Items, {
                 parentContainer: section,
                 itemsContainer: section.querySelector('.itemsContainer'),
-                shape: 'backdrop',
-                rows: 3,
+                shape: 'portrait',
+                rows: 1,
                 preferThumb: true,
                 scalable: false
             });
@@ -94,7 +94,7 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
         var options = {
 
             SortBy: "IsFavoriteOrLiked",
-            IncludeItemTypes: "Series",
+            IncludeItemTypes: "Episodes",
             Limit: 20,
             Recursive: true,
             ParentId: parentId,
