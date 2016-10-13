@@ -193,7 +193,7 @@ define(['connectionManager', 'loading', './../skininfo', 'alphaPicker', './../co
                     }
                 },
                 cardOptions: {
-                    rows: 3,
+                    rows: 2,
                     scalable: false
                 }
             });
@@ -241,7 +241,7 @@ define(['connectionManager', 'loading', './../skininfo', 'alphaPicker', './../co
                         genres: genresResult.Items,
                         indexLimit: 4,
                         parentId: pageParams.parentid,
-                        rows: 3,
+                        rows: 2,
                         scalable: false
                     }
                 });

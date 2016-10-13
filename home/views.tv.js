@@ -3,9 +3,8 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
     function loadResume(element, parentId) {
 
         var options = {
+
             Limit: 60,
-            IncludeItemTypes: "Episode",
-            Fields: "PrimaryImageAspectRatio",
             ParentId: parentId,
             ImageTypeLimit: 1,
             EnableImageTypes: "Primary,Backdrop,Thumb"
@@ -18,10 +17,9 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
             cardBuilder.buildCards(result.Items, {
                 parentContainer: section,
                 itemsContainer: section.querySelector('.itemsContainer'),
-                shape: 'portrait',
-                rows: 1,
+                shape: 'backdrop',
+                rows: 3,
                 preferThumb: true,
-                showGroupCount: true,
                 scalable: false
             });
         });
@@ -44,12 +42,8 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
 
         var options = {
 
-            IncludeItemTypes: "Episode",
             Limit: 60,
-            Fields: "PrimaryImageAspectRatio",
-            ParentId: parentId,
-            ImageTypeLimit: 1,
-            EnableImageTypes: "Primary,Backdrop,Thumb"
+            ParentId: parentId
         };
 
         return Emby.Models.nextUp(options).then(function (result) {
@@ -59,10 +53,9 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
             cardBuilder.buildCards(result.Items, {
                 parentContainer: section,
                 itemsContainer: section.querySelector('.itemsContainer'),
-                shape: 'portrait',
-                rows: 1,
+                shape: 'backdrop',
+                rows: 3,
                 preferThumb: true,
-                showGroupCount: true,
                 scalable: false
             });
         });
@@ -87,9 +80,9 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
             cardBuilder.buildCards(result, {
                 parentContainer: section,
                 itemsContainer: section.querySelector('.itemsContainer'),
-                shape: 'portrait',
-                rows: 1,
-                preferThumb: false,
+                shape: 'backdrop',
+                rows: 3,
+                preferThumb: true,
                 showGroupCount: true,
                 scalable: false
             });
@@ -101,7 +94,7 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
         var options = {
 
             SortBy: "IsFavoriteOrLiked",
-            IncludeItemTypes: "Episodes",
+            IncludeItemTypes: "Series",
             Limit: 20,
             Recursive: true,
             ParentId: parentId,
