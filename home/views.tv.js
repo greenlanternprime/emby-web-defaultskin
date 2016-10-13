@@ -125,18 +125,18 @@ define(['./spotlight', 'focusManager', 'cardBuilder', './../skininfo', 'emby-ite
 
         return Emby.Models.items(options).then(function (result) {
 
-            var items = result.Items;
-            var imgOptions = {
-                maxWidth: 600
-            };
+            //var items = result.Items;
+            //var imgOptions = {
+            //    maxWidth: 600
+            //};
 
-            if (items.length > 0) {
-                element.querySelector('.tvFavoritesCard .cardImage').style.backgroundImage = "url('" + Emby.Models.backdropImageUrl(items[0], imgOptions) + "')";
-            }
+            //if (items.length > 0) {
+            //    element.querySelector('.tvFavoritesCard .cardImage').style.backgroundImage = "url('" + Emby.Models.backdropImageUrl(items[0], imgOptions) + "')";
+            //}
 
-            if (items.length > 1) {
-                element.querySelector('.allSeriesCard .cardImage').style.backgroundImage = "url('" + Emby.Models.backdropImageUrl(items[1], imgOptions) + "')";
-            }
+            //if (items.length > 1) {
+            //    element.querySelector('.allSeriesCard .cardImage').style.backgroundImage = "url('" + Emby.Models.backdropImageUrl(items[1], imgOptions) + "')";
+            //}
         });
     }
 

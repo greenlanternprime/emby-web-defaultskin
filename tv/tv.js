@@ -193,7 +193,7 @@ define(['connectionManager', 'loading', './../skininfo', 'alphaPicker', './../co
                     }
                 },
                 cardOptions: {
-                    rows: 2,
+                    rows: 3,
                     scalable: false
                 }
             });
@@ -241,7 +241,7 @@ define(['connectionManager', 'loading', './../skininfo', 'alphaPicker', './../co
                         genres: genresResult.Items,
                         indexLimit: 4,
                         parentId: pageParams.parentid,
-                        rows: 2,
+                        rows: 3,
                         scalable: false
                     }
                 });
@@ -290,7 +290,7 @@ define(['connectionManager', 'loading', './../skininfo', 'alphaPicker', './../co
                 cardBuilder.buildCards(result.Items, {
                     itemsContainer: section.querySelector('.itemsContainer'),
                     shape: 'auto',
-                    rows: 2,
+                    rows: 3,
                     scalable: false
                 });
 
