@@ -194,7 +194,8 @@ define(['connectionManager', 'loading', './../skininfo', 'alphaPicker', './../co
                 },
                 cardOptions: {
                     rows: 3,
-                    scalable: false
+                    scalable: true,
+                    showTitle: true
                 }
             });
 
@@ -242,7 +243,8 @@ define(['connectionManager', 'loading', './../skininfo', 'alphaPicker', './../co
                         indexLimit: 4,
                         parentId: pageParams.parentid,
                         rows: 3,
-                        scalable: false
+                        showTitle: true,
+                        scalable: true
                     }
                 });
 
@@ -291,7 +293,8 @@ define(['connectionManager', 'loading', './../skininfo', 'alphaPicker', './../co
                     itemsContainer: section.querySelector('.itemsContainer'),
                     shape: 'auto',
                     rows: 3,
-                    scalable: false
+                    showTitle: true,
+                    scalable: true
                 });
 
                 if (autoFocus) {
@@ -332,9 +335,9 @@ define(['connectionManager', 'loading', './../skininfo', 'alphaPicker', './../co
                     shape: 'auto',
                     rows: 3,
                     overlayText: true,
-                    //showTitle: true,
+                    showTitle: true,
                     showParentTitle: true,
-                    scalable: false
+                    scalable: true
                 });
             });
         }
