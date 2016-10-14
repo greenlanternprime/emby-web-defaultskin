@@ -120,6 +120,14 @@ a {
     background-color: #009688;
 }
 
+.allSeriesCard .cardImageContainer {
+    background-color: #4CBE00;
+}
+
+.tvFavoritesCard .cardImageContainer {
+    background-color: #D51400;
+}
+
 .tvUpcomingCard .cardImageContainer {
     background-color: #009688;
 }
