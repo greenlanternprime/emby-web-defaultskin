@@ -1,7 +1,7 @@
 <div class="horizontalSection">
     <div class="sectionTitle">&nbsp;</div>
     <div>
-        <button type="button" class="card block wideSpotlightCard noScale">
+        <!--<button type="button" class="card block wideSpotlightCard noScale">
             <div class="cardImageContainer cardBox">
 
                 <div class="cardImage coveredImage coveredImage-noScale"></div>
@@ -11,33 +11,33 @@
                     <div class="cardText"></div>
                 </div>
             </div>
-        </button>
+        </button>-->
         <div class="horizontalItemsContainer">
-            <button type="button" class="card backdropCard allMoviesCard" data-type="allseries">
-                <div class="cardImageContainer cardBox cardBox-focustransform">
-
-                    <div class="cardImage coveredImage coveredImage-noScale"></div>
-
+            <button type="button" class="card squareCard allMoviesCard" data-type="allseries">
+                <div style="background-color: #4CBE00;" class="cardImageContainer coveredImage cardBox coveredImage-noScale cardBox-focustransform">
+                    <i class="cardImageIcon md-icon">list</i>
                     <div class="innerCardFooter">
-                        <div class="cardText">${AllMovies}</div>
+                        <div class="cardText">All Movies</div>
                     </div>
                 </div>
             </button>
-            <button type="button" class="card backdropCard movieFavoritesCard" data-type="genres">
-                <div class="cardImageContainer cardBox cardBox-focustransform">
+        </div>
 
+        <div class="horizontalItemsContainer">
+            <button type="button" class="card squareCard movieFavoritesCard" data-type="genres">
+                <div style="background-color: #D51400;" class="cardImageContainer cardBox cardBox-focustransform">
                     <div class="cardImage coveredImage coveredImage-noScale"></div>
-
+                    <i class="cardImageIcon md-icon">favorite</i>
                     <div class="innerCardFooter">
                         <div class="cardText">${Favorites}</div>
                     </div>
                 </div>
             </button>
+        </div>
+        <div class="horizontalItemsContainer">
             <button type="button" class="card squareCard movieCollectionsCard" data-type="genres">
                 <div class="cardImageContainer coveredImage cardBox noScale cardBox-focustransform">
-
                     <i class="cardImageIcon md-icon">folder_open</i>
-
                     <div class="innerCardFooter">
                         <div class="cardText">${Collections}</div>
                     </div>
