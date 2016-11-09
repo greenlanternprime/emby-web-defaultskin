@@ -1,4 +1,4 @@
-define(['cardBuilder', 'emby-itemscontainer'], function (cardBuilder) {
+define(['cardBuilder', 'alphaPicker','./../components/horizontallist', './../components/tabbedpage', 'backdrop','emby-itemscontainer'], function (cardBuilder) {
 
     function loadAll(element, parentId, autoFocus) {
 
