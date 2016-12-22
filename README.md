@@ -1,6 +1,6 @@
-# emby-web-defaultskin
+# emby-web-wildcardskin
 
-This default skin for Emby Theater. To create your own skin, follow these steps:
+This Wildcard Skin for Emby Theater. To create your own skin, follow these steps:
 
 * Fork this repository. After forking, you'll probably want to rename it.
 * Update package.json (see below). 
@@ -19,7 +19,7 @@ This file is used to display information about your add-on in places such as the
 
 # Installation
 
-Install into the app by installing a plugin from a url. The url is: http://mediabrowser.github.io/emby-web-defaultskin/package.json
+Install into the app by installing a plugin from a url. The url is: https://greenlanternprime.github.io/emby-web-wildcardskin/package.json
 
 # Local Testing
 
