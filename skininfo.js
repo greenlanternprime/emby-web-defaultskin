@@ -1,7 +1,8 @@
-define([''], function () {
+define([], function () {
+    'use strict';
 
     return {
-        id: 'wildcardskin',
-        name: 'Wildcard Skin'
+        id: 'defaultskin',
+        name: 'Default Skin'
     };
 });

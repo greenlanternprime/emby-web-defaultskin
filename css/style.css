@@ -2,12 +2,16 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    opacity: .7;
+}
+
 .headerLogo {
     background-position: left center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 6.9vw;
-    height: 3.7vh;
+    width: 6em;
+    height: 1.8em;
     min-height: 40px;
     min-width: 74px;
     vertical-align: middle;
@@ -26,7 +30,7 @@ a {
     background-position: left center;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 20.83vw;
+    width: 13.2em;
 }
 
 .headerAudioPlayerButton {
@@ -34,8 +38,7 @@ a {
 }
 
 .headerBackButton {
-    margin-left: -1.6vw;
-    padding: 0 4px;
+    margin-left: -1.4em;
 }
 
 .headerButton {
@@ -98,6 +101,10 @@ a {
     display: none !important;
 }
 
+.flex-direction-column {
+    flex-direction: column;
+}
+
 .pageContainer {
     padding-top: 11vh;
     overflow: hidden;
@@ -107,7 +114,14 @@ a {
     .pageContainer.flex {
         padding-top: 11vh;
         overflow: hidden;
-        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+        contain: strict;
+    }
+
+    .pageContainer.flex {
+        padding-top: 11vh;
+        overflow: hidden;
         display: -webkit-flex;
         display: flex;
         contain: strict;
@@ -211,6 +225,7 @@ a {
 .userViewNames h3 {
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: 300;
 }
 
 .userViewNames .btnUserViewHeader {
@@ -242,19 +257,10 @@ a {
         padding-left: .1em;
     }
 
-.mediaInfoItem {
-    display: inline-block;
-    margin: 0 1em 0 0;
-}
-
 i.mediaInfoItem {
     width: 4vh;
     height: 4vh;
     margin-right: .6em;
-}
-
-.mediaInfoItem:last-child {
-    margin-right: 0;
 }
 
 .listItemMediaInfo {
@@ -266,7 +272,7 @@ i.mediaInfoItem {
     bottom: .5%;
     left: 3.7vw;
     right: 10%;
-    max-width: 60%;
+    max-width: 70%;
     font-size: 84%;
     color: #ccc;
     /*position: relative;
@@ -305,9 +311,15 @@ i.mediaInfoItem {
     background-position: right center;
     background-size: contain;
     margin-right: 1em;
+    flex-shrink: 0;
 }
 
-.selectedItemInfoInner > div {
+.selectedItemInfoDetails {
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.selectedItemInfoDetails > div {
     white-space: nowrap;
     max-width: 100%;
     overflow: hidden;
@@ -325,6 +337,11 @@ i.mediaInfoItem {
     height: 20.83vh;
 }
 
+.horizontalPageContent .bannerCard .cardImageContainer {
+    width: 37.04vh;
+    height: 5.556vh;
+}
+
 .horizontalPageContent .portraitCard .cardImageContainer {
     width: 21.02vh;
     height: 31.57vh;
@@ -333,6 +350,11 @@ i.mediaInfoItem {
 .homePageContent .squareCard:not(.scalableCard) .cardImageContainer {
     width: 21.85vh;
     height: 21.85vh;
+}
+
+.homePageContent .bannerCard .cardImageContainer {
+    width: 38.89vh;
+    height: 5.8335vh;
 }
 
 .homePageContent .backdropCard .cardImageContainer {
@@ -353,6 +375,11 @@ i.mediaInfoItem {
 .listPageContent .backdropCard .cardImageContainer {
     width: 38.222vh;
     height: 21.5vh;
+}
+
+.listPageContent .bannerCard .cardImageContainer {
+    width: 38.222vh;
+    height: 5.733vh;
 }
 
 .listPageContent .portraitCard .cardImageContainer {
@@ -460,15 +487,15 @@ i.mediaInfoItem {
 
 
 .verticalSection {
-    margin-bottom: 6.5vh;
+    margin-bottom: 3em;
 }
 
     .verticalSection > h2 {
         margin-bottom: .25em;
     }
 
-.mainSection .itemPageButtons button {
-    padding: .6em 1em;
+.mainSection .raised {
+    padding: .7em 1.3em;
     text-transform: none;
     margin: 0 .35em 0 0;
 }

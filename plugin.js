@@ -1,4 +1,5 @@
 define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'events', 'datetime', 'mouseManager'], function (playbackManager, pluginManager, browser, connectionManager, events, datetime, mouseManager) {
+    'use strict';
 
     function updateClock() {
 
@@ -16,9 +17,9 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
 
         var self = this;
 
-        self.name = 'Wildcard Skin';
+        self.name = 'Default Skin';
         self.type = 'skin';
-        self.id = 'wildcardskin';
+        self.id = 'defaultskin';
 
         var dependencyPrefix = self.id;
         var settingsObjectName = dependencyPrefix + '/skinsettings';
@@ -37,7 +38,7 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
 
             if (browser.android) {
                 // on android we can't just use Roboto by name, it has to be sans-serif, which we don't want on other platforms
-                list.push('css!' + pluginManager.mapPath(self, 'css/fonts.android'));
+                list.push('css!' + pluginManager.mapPath(self, 'css/fonts'));
             } else if (browser.tv && !browser.chrome) {
                 console.log("Using system fonts with explicit sizes");
                 list.push('css!' + pluginManager.mapPath(self, 'css/fonts.sized'));
@@ -45,11 +46,9 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
                 // Designed to use system default fonts
                 console.log("Using system fonts");
                 list.push('css!' + pluginManager.mapPath(self, 'css/fonts.device'));
-            } else if (browser.edge) {
-                list.push('css!' + pluginManager.mapPath(self, 'css/fonts.segoe'));
             } else {
                 console.log("Using default fonts");
-                list.push('opensansFont');
+                //list.push('opensansFont');
                 list.push('css!' + pluginManager.mapPath(self, 'css/fonts'));
             }
 
@@ -72,7 +71,7 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
 
             var files = [];
 
-            var languages = ['de', 'en-GB', 'en-US', 'fr', 'hr', 'it', 'nl', 'pl', 'pt-BR', 'pt-PT', 'ru', 'sv'];
+            var languages = ['de', 'en-GB', 'en-US', 'fr', 'hr', 'it', 'nl', 'pl', 'pt-BR', 'pt-PT', 'ru', 'sv', 'zh-CN'];
 
             return languages.map(function (i) {
                 return {
@@ -119,7 +118,8 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
                 dependencies: [
                     'cardStyle',
                     'emby-button',
-                    icons]
+                    icons
+                ]
             });
 
             routes.push({
@@ -165,7 +165,7 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
                 controller: self.id + '/search/search',
                 dependencies: [
                     'css!' + pluginManager.mapPath(self, 'search/search.css'),
-					'emby-input',
+                    'emby-input',
                     icons
                 ]
             });
@@ -207,21 +207,18 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
                 supportsThemeMedia: true
             });
 
-            // enable later after app approvals
-            if (!browser.tv) {
-                routes.push({
-                    path: 'settings/settings.html',
-                    transition: 'slide',
-                    controller: self.id + '/settings/settings',
-                    dependencies: [
-                        'emby-checkbox'
-                    ],
-                    type: 'settings',
-                    category: 'Display',
-                    thumbImage: '',
-                    title: 'Wildcard Skin'
-                });
-            }
+            routes.push({
+                path: 'settings/settings.html',
+                transition: 'slide',
+                controller: self.id + '/settings/settings',
+                dependencies: [
+                    'emby-checkbox'
+                ],
+                type: 'settings',
+                category: 'Display',
+                thumbImage: '',
+                title: self.name
+            });
 
             return routes;
         };
@@ -259,7 +256,7 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
 
             if (item.IsFolder) {
 
-                if (item.Type != 'Series' && item.Type != 'Season' && item.Type != 'MusicAlbum' && item.Type != 'MusicArtist' && item.Type != 'Playlist' && item.Type != 'BoxSet') {
+                if (item.Type !== 'Series' && item.Type !== 'Season' && item.Type !== 'MusicAlbum' && item.Type !== 'MusicArtist' && item.Type !== 'Playlist' && item.Type !== 'BoxSet') {
                     showList = true;
                 }
             }
@@ -332,6 +329,7 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
         }
 
         var headerBackButton;
+
         function getBackButton() {
 
             if (!headerBackButton) {
@@ -344,6 +342,7 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
 
             getBackButton().classList.remove('hide-mouse-idle');
         }
+
         function onMouseIdle() {
             getBackButton().classList.add('hide-mouse-idle');
         }
@@ -399,7 +398,7 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
 
         function onPlaybackStop(e, stopInfo) {
 
-            if (stopInfo.nextMediaType != 'Audio') {
+            if (stopInfo.nextMediaType !== 'Audio') {
                 document.querySelector('.headerAudioPlayerButton').classList.add('hide');
             }
         }
@@ -422,7 +421,7 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
 
             document.querySelector('.headerLogo').classList.add('hide');
 
-            if (!browser.tv) {
+            if (!browser.operaTv && !browser.web0s) {
                 document.querySelector('.headerSearchButton').classList.remove('hide');
             }
 
@@ -469,12 +468,13 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
             }
             var path = e.detail.state.path;
 
-            var isDetailBackdrop = path.indexOf('item.html') != -1 || -1 && path.indexOf('guide.html') != -1 || path.indexOf('nowplaying') != -1;
-            var isStaticBackdrop = !isDetailBackdrop && (path.indexOf('login.html') != -1 || path.indexOf('selectserver.html') != -1);
+            var isDetailBackdrop = path.indexOf('item.html') !== -1 || -1 && path.indexOf('guide.html') !== -1 || path.indexOf('nowplaying') !== -1;
+            var isStaticBackdrop = !isDetailBackdrop && (path.indexOf('login.html') !== -1 || path.indexOf('selectserver.html') !== -1);
             setBackdropStyle(isDetailBackdrop, isStaticBackdrop);
         }
 
         var backgroundContainer;
+
         function setBackdropStyle(isDetailBackdrop, isStaticBackdrop) {
 
             backgroundContainer = backgroundContainer || document.querySelector('.backgroundContainer');
@@ -495,5 +495,5 @@ define(['playbackManager', 'pluginManager', 'browser', 'connectionManager', 'eve
                 backgroundContainer.classList.remove('staticBackdrop');
             }
         }
-    }
+    };
 });

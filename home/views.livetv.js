@@ -1,4 +1,5 @@
 define(['focusManager', 'cardBuilder', 'pluginManager', './../skininfo', 'browser', 'emby-itemscontainer'], function (focusManager, cardBuilder, pluginManager, skinInfo,  browser) {
+    'use strict';
 
     function loadLatestRecordings(element, apiClient) {
 
@@ -91,11 +92,6 @@ define(['focusManager', 'cardBuilder', 'pluginManager', './../skininfo', 'browse
 
     function view(element, apiClient, parentId, autoFocus) {
         var self = this;
-
-        // The guide currently depends on browser support for flex layouts
-        if (!browser.noFlex) {
-            element.querySelector('.guideCard').classList.remove('hide');
-        }
 
         if (autoFocus) {
             focusManager.autoFocus(element);

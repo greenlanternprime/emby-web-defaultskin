@@ -69,17 +69,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dependences\MCE_MediaBrowser3_0_249\MediaBrowser.dll</HintPath>
     </Reference>
-    <Reference Include="MediaBrowser.Model">
-      <HintPath>..\dependences\MediaBrowser.Model.net35\MediaBrowser.Model.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.MediaCenter">
-      <Name>Microsoft.MediaCenter</Name>
-      <HintPath>..\dependences\MediaCenter\Microsoft.MediaCenter.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.MediaCenter.UI">
-      <Name>Microsoft.MediaCenter.UI</Name>
-      <HintPath>..\dependences\MediaCenter\Microsoft.MediaCenter.UI.dll</HintPath>
-    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>

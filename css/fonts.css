@@ -1,6 +1,5 @@
 html {
-    /* Check if certain android or iOS fonts are natively available, otherwise load Open Sans */
-    font-family: San Francisco, Helvetica Neue, 'Open Sans';
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", 'Open Sans', sans-serif;
 }
 
 html {
@@ -8,15 +7,15 @@ html {
 }
 
 h1 {
-    font-weight: 300;
+    font-weight: normal;
 }
 
 h2 {
-    font-weight: 300;
+    font-weight: normal;
 }
 
 h3 {
-    font-weight: 300;
+    font-weight: normal;
 }
 
 html.layout-tv {
@@ -33,5 +32,4 @@ html.layout-tv {
 
 .layout-tv h3 {
     font-size: 3vh;
-    font-weight: bold;
 }
